@@ -21,18 +21,24 @@ void pttrn1(int n){
         cout<<endl;
     }
 }
-
+//------->Basic Maths<---------
+//Extraction of number 9879--->9,7,8, 9
+//in reverse method
 void extrctNum(int n){
     int digit;
         digit=n%10;
         cout<<digit<<endl;
 }
 
+ 
+
 int main(){
+    int ctn=0;
     int number;
     cin>>number;
     while(number>0){
         extrctNum(number);
         number/=10;
+        ctn++;
     }
 }
