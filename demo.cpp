@@ -33,12 +33,14 @@ void extrctNum(int n){
  
 
 int main(){
-    int ctn=0;
-    int number;
-    cin>>number;
-    while(number>0){
-        extrctNum(number);
-        number/=10;
-        ctn++;
-    }
+    // int ctn=0;
+    // int number;
+    // cin>>number;
+    // while(number>0){
+    //     extrctNum(number);
+    //     number/=10;
+    //     ctn++;
+    // }
+
+    
 }
