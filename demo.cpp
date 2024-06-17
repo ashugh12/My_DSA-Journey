@@ -56,6 +56,16 @@ int GCD(int m, int n){
 }
  
 
+int GCD_Second(int m, int n){
+    while(m>0 && n>0){
+        if(m>n){m=m%n;}
+        else{n=n%m;}
+    }
+    //if one m is zero, other is gcd
+    if(m==0){return n;}
+    else{return m;}
+}
+
 int main(){
     // int ctn=0;
     // int number;
@@ -72,4 +82,5 @@ int main(){
     int num1, num2;
     cin>>num1>>num2;
     cout<<GCD(num1, num2);
+    cout<<endl<<GCD_Second(num1, num2);
 }
