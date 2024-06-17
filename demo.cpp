@@ -46,6 +46,14 @@ void printDivisors(int n){
         cout<<it<<",";
     }
 }
+
+int GCD(int m, int n){
+    for(int i=min(m,n); i>=1; i--){
+        if(m%i==0 && n%i==0){
+            return i;
+        }
+    }
+}
  
 
 int main(){
@@ -57,8 +65,11 @@ int main(){
     //     number/=10;
     //     ctn++;
     // }
-    int n;
-    cin>>n;
-    printDivisors(n);
+    // int n;
+    // cin>>n;
+    // printDivisors(n);
 
+    int num1, num2;
+    cin>>num1>>num2;
+    cout<<GCD(num1, num2);
 }
