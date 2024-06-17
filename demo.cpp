@@ -84,6 +84,12 @@ void print_cnt(int i, int n){
     std::cout<<i<<endl;
     print_cnt(i+1, n);
 }
+
+void print_cnt_rev(int i){
+    if(i<1){return;}
+    std::cout<<i<<endl;
+    print_cnt_rev(i-1);
+}
 int main(){
     // int ctn=0;
     // int number;
@@ -101,5 +107,6 @@ int main(){
     // cin>>num1>>num2;
     // std::cout<<GCD(num1, num2);
     // std::cout<<endl<<GCD_Second(num1, num2);
-    print_cnt(1, 5);
+    print_cnt_rev(5);
+
 }
