@@ -33,7 +33,7 @@ void extrctNum(int n){
 
 void printDivisors(int n){
     vector<int> ls;
-    for(int i=1; i<=sqrt(n); i++){
+    for(int i=1; i<=sqrt(n); i++){//instead of sqrt() we should use i*i<=n;
         if(n%i==0){
             ls.push_back(i);
             if(n/i!=i){
