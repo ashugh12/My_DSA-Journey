@@ -16,9 +16,9 @@ int max(int n, int m)
 void pttrn1(int n){
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            cout<<"*";
+            std::cout<<"*";
         }
-        cout<<endl;
+        std::cout<<endl;
     }
 }
 //------->Basic Maths<---------
@@ -27,7 +27,7 @@ void pttrn1(int n){
 void extrctNum(int n){
     int digit;
         digit=n%10;
-        cout<<digit<<endl;
+        std::cout<<digit<<endl;
 }
 
 
@@ -43,7 +43,7 @@ void printDivisors(int n){
     }
     sort(ls.begin(), ls.end());
     for(auto it:ls){
-        cout<<it<<",";
+        std::cout<<it<<",";
     }
 }
 
@@ -66,6 +66,24 @@ int GCD_Second(int m, int n){
     else{return m;}
 }
 
+//Recursion --> print name for n-times
+
+void print_nam(int i, int n){
+    if(i>n){
+        return;
+    }
+    std::cout<<"raj ";
+    print_nam(i+1, n);
+}
+ //print 1 to n
+
+void print_cnt(int i, int n){
+    if(i>n){
+        return;
+    }
+    std::cout<<i<<endl;
+    print_cnt(i+1, n);
+}
 int main(){
     // int ctn=0;
     // int number;
@@ -79,8 +97,9 @@ int main(){
     // cin>>n;
     // printDivisors(n);
 
-    int num1, num2;
-    cin>>num1>>num2;
-    cout<<GCD(num1, num2);
-    cout<<endl<<GCD_Second(num1, num2);
+    // int num1, num2;
+    // cin>>num1>>num2;
+    // std::cout<<GCD(num1, num2);
+    // std::cout<<endl<<GCD_Second(num1, num2);
+    print_cnt(1, 5);
 }

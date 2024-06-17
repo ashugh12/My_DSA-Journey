@@ -45,7 +45,7 @@ int main()
         int N;
         cin>>N;
         Solution ob;
-        cout << ob.evenlyDivides(N) << endl;
+        std::cout << ob.evenlyDivides(N) << endl;
     }
     return 0; 
 }
