@@ -90,6 +90,13 @@ void print_cnt_rev(int i){
     std::cout<<i<<endl;
     print_cnt_rev(i-1);
 }
+
+//Print count from 1 to n using backtrack
+void print_cnt_backtrack(int i,int n){
+    if(i<1){return ;}
+    print_cnt_backtrack(i-1, n);
+    std::cout<<i<<endl;
+}
 int main(){
     // int ctn=0;
     // int number;
@@ -107,6 +114,5 @@ int main(){
     // cin>>num1>>num2;
     // std::cout<<GCD(num1, num2);
     // std::cout<<endl<<GCD_Second(num1, num2);
-    print_cnt_rev(5);
-
+    print_cnt_backtrack(5, 5);
 }
