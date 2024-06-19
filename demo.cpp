@@ -154,6 +154,13 @@ bool check_palindrome(int i, string &s){
     if(s[i]!=s[s.size()-i-1]){return false;}
     return check_palindrome(i+1, s);
 }
+
+int N_fibo_num(int n){
+    if(n==1 || n==0){return n;}
+    int last= N_fibo_num(n-1);
+    int second=N_fibo_num(n-2);
+    return last+second;
+}
 int main(){
     // int ctn=0;
     // int number;
@@ -210,11 +217,12 @@ int main(){
     //     cout<<i<<" ";
     // }    
 
-    string a= "mada";
-    if(check_palindrome(0, a)){
-        cout<<"It is a palindrome number."<<endl;
-    }
-    else{
-        cout<<"It is not a palindrome number."<<endl;
-    }
+    // string a= "mada";
+    // if(check_palindrome(0, a)){
+    //     cout<<"It is a palindrome number."<<endl;
+    // }
+    // else{
+    //     cout<<"It is not a palindrome number."<<endl;
+    // }
+    cout<<N_fibo_num(4);
 }
