@@ -104,6 +104,20 @@ void print_cnt_backtrack_rev(int i,int n){
     print_cnt_backtrack_rev(i+1, n);
     std::cout<<i<<endl;
 }
+
+void print_name(int n){
+    if(n<1){return ;}
+    cout<<"raj "<<endl;
+    print_name(n-1);
+}
+
+int sum_of_n(int sum, int num){
+    if(num<1){
+        return sum;
+    }
+    sum_of_n(sum+num, num-1);
+}
+
 int main(){
     // int ctn=0;
     // int number;
@@ -121,5 +135,26 @@ int main(){
     // cin>>num1>>num2;
     // std::cout<<GCD(num1, num2);
     // std::cout<<endl<<GCD_Second(num1, num2);
-    print_cnt_backtrack_rev(1, 6);
+    // print_cnt_backtrack_rev(1, 6);
+    // int i1=4; int i2[]={1, 3, 2,5};
+    // double sum =0;
+    // vector<int> vec;
+    // for(int i=0; i<i1; i++){
+    //     sum+=i2[i];
+    //     vec.push_back(i2[i]);
+    // }
+    // vector<int> ch(i2, i2+i1);
+    // for(auto it: vec){
+    //     cout<<it<<" ";
+    // }
+    // cout<<endl;
+    // sort(vec.begin(), vec.end());
+    // for(auto it: vec){
+    //     cout<<it<<" ";
+    // }
+    // cout<<endl;
+    // for(auto it: ch){
+    //     cout<<it<<" ";
+    // }
+    cout<<sum_of_n(0,4);
 }
