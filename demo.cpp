@@ -148,6 +148,12 @@ void rev_array_sec(int arr[], int i,int s){
     swap(arr[i], arr[s-i-1]);
     rev_array_sec(arr, i+1,s);
 }
+
+bool check_palindrome(int i, string &s){
+    if(i>=s.size()/2){return true;}
+    if(s[i]!=s[s.size()-i-1]){return false;}
+    return check_palindrome(i+1, s);
+}
 int main(){
     // int ctn=0;
     // int number;
@@ -191,16 +197,24 @@ int main(){
     // cout<<endl;
     // cout<<factorial_parameter(1,4);
 
-    int arr[]={1,2,4,5,6};
-    int l=0;
-    int r=sizeof(arr)/sizeof(arr[0]);
-    for(auto i: arr){
-        cout<<i<<" ";
-    }    
-    cout<<endl;
-    rev_array_sec(arr,l, r);
-    cout<<arr[0]<<endl;
-    for(auto i: arr){
-        cout<<i<<" ";
-    }    
+    // int arr[]={1,2,4,5,6};
+    // int l=0;
+    // int r=sizeof(arr)/sizeof(arr[0]);
+    // for(auto i: arr){
+    //     cout<<i<<" ";
+    // }    
+    // cout<<endl;
+    // rev_array_sec(arr,l, r);
+    // cout<<arr[0]<<endl;
+    // for(auto i: arr){
+    //     cout<<i<<" ";
+    // }    
+
+    string a= "mada";
+    if(check_palindrome(0, a)){
+        cout<<"It is a palindrome number."<<endl;
+    }
+    else{
+        cout<<"It is not a palindrome number."<<endl;
+    }
 }
