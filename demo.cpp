@@ -122,6 +122,32 @@ int sum_of_n_sec(int n){
     if(n==0){return 0;}
     return n+sum_of_n_sec(n-1);
 }
+
+int factorial_recursion(int n){
+    if(n==2){
+        return 2;
+    }
+    return n*factorial_recursion(n-1);
+}
+
+int factorial_parameter(int i, int n){
+    if(i==n){return n;}
+    return i*factorial_parameter(i+1, n);
+}
+
+void reverse_array(int a[],int l, int r){
+    if(l>=r){return ;}
+    swap(a[l], a[r]);
+    reverse_array(a, l+1, r-1);
+}
+
+void rev_array_sec(int arr[], int i,int s){
+    if(i>=s/2){
+        return;
+    }
+    swap(arr[i], arr[s-i-1]);
+    rev_array_sec(arr, i+1,s);
+}
 int main(){
     // int ctn=0;
     // int number;
@@ -160,6 +186,21 @@ int main(){
     // for(auto it: ch){
     //     cout<<it<<" ";
     // }
-    cout<<sum_of_n_sec(4);
+    // cout<<sum_of_n_sec(4);
+    // cout<<factorial_recursion(4);
+    // cout<<endl;
+    // cout<<factorial_parameter(1,4);
+
+    int arr[]={1,2,4,5,6};
+    int l=0;
+    int r=sizeof(arr)/sizeof(arr[0]);
+    for(auto i: arr){
+        cout<<i<<" ";
+    }    
+    cout<<endl;
+    rev_array_sec(arr,l, r);
+    cout<<arr[0]<<endl;
+    for(auto i: arr){
+        cout<<i<<" ";
+    }    
 }
-   
