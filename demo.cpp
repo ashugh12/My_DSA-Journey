@@ -118,6 +118,10 @@ int sum_of_n(int sum, int num){
     sum_of_n(sum+num, num-1);
 }
 
+int sum_of_n_sec(int n){
+    if(n==0){return 0;}
+    return n+sum_of_n_sec(n-1);
+}
 int main(){
     // int ctn=0;
     // int number;
@@ -156,5 +160,6 @@ int main(){
     // for(auto it: ch){
     //     cout<<it<<" ";
     // }
-    cout<<sum_of_n(0,4);
+    cout<<sum_of_n_sec(4);
 }
+   
