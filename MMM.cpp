@@ -52,16 +52,16 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    for(auto it: arr){
-        cout<<it<<" ";
-    }
-    cout<<endl;
+    // for(auto it: arr){
+    //     cout<<it<<" ";
+    // }
+    // cout<<endl;
     sort(arr, arr+n); // It sort the 
-    for(auto it: arr){
-        cout<<it<<" ";
-    }
-    // cout<<"Mean: "<<fixed<<setprecision(6)<<mean(arr,n)<<endl;
-    // cout<<"Median: "<<fixed<<setprecision(6)<<median(arr,n)<<endl;
-    // cout<<"Mode: "<<mode(arr,n);
+    // for(auto it: arr){
+    //     cout<<it<<" ";
+    // }
+    cout<<"Mean: "<<fixed<<setprecision(6)<<mean(arr,n)<<endl;
+    cout<<"Median: "<<fixed<<setprecision(6)<<median(arr,n)<<endl;
+    cout<<"Mode: "<<mode(arr,n);
 
 }
