@@ -21,7 +21,7 @@ double median(int arr[], int size){
     }
 }
 
-double mode(int arr[], int size){
+int mode(int arr[], int size){
     map<int , int> frequency;
     for(int i=0; i<size; i++){
         frequency[arr[i]]++;
