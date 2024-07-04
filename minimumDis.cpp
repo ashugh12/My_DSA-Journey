@@ -1,8 +1,6 @@
 #include "headerfile.h"
 using namespace std;
 
-
-
 int minCost(int n, vector<int>& A) {
     vector<int> dp(n + 1, INT_MAX);
     dp[1] = 0; // cost to reach city 1 is 0
@@ -15,8 +13,7 @@ int minCost(int n, vector<int>& A) {
             dp[i + 3] = min(dp[i + 3], dp[i] + abs(A[i - 1] - A[i + 2]));
         }
     }
-
-    return dp[n];
+    return dp[n]; 
 }
 
 
